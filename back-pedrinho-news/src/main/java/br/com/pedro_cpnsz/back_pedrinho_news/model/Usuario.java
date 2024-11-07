@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "usuarios")
 @Data
 @NoArgsConstructor
+
 public class Usuario {
 
     @Id
@@ -36,5 +37,4 @@ public class Usuario {
 
     @Column(name = "data_cadastro")
     private LocalDateTime data_cadastro;
-
 }
