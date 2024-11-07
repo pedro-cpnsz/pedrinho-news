@@ -1,6 +1,6 @@
 package br.com.pedro_cpnsz.back_pedrinho_news.model;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -42,5 +42,13 @@ public class Noticia {
     private Categoria categoria;
 
     @Column(name = "data_publicacao")
-    private LocalDateTime data_publicacao;
+    private Timestamp data_publicacao;
+
+    public Noticia(String titulo, String conteudo, Usuario usuario, Categoria categoria, Timestamp data_publicacao) {
+        this.titulo = titulo;
+        this.conteudo = conteudo;
+        this.usuario = usuario;
+        this.categoria = categoria;
+        this.data_publicacao = data_publicacao;
+    }
 }
