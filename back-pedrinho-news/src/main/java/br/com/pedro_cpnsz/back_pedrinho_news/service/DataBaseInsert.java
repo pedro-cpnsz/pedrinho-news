@@ -31,10 +31,12 @@ public class DataBaseInsert implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         
-        Categoria c1 = new Categoria("Política");
+        Categoria c1 = new Categoria("Política", null);
         categoriaRepository.save(c1);
-        Categoria c2 = new Categoria("Esportes");
+        Categoria c2 = new Categoria("Esportes", null);
         categoriaRepository.save(c2);
+        Categoria c3 = new Categoria("Futebol", c2);
+        categoriaRepository.save(c3);
 
         LocalDateTime now = LocalDateTime.now();
         Usuario u1 = new Usuario("Pedro", "pedro@email.com", "123123", Tipo.admin, Timestamp.valueOf(now));
