@@ -1,1 +1,21 @@
-<p>noticia works!</p>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Conteúdo</th>
+        <th>Usuário</th>
+        <th>Categoria</th>
+        <th>Data de publicação</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let not of not$">
+            <th>{{not.id}}</th>
+            <th>{{not.titulo}}</th>
+            <th>{{not.conteudo}}</th>
+            <th>{{not.usuario.nome}}</th>
+            <th>{{not.categoria.nome}}</th>
+            <th>{{not.data_publicacao}}</th>
+        </tr>
+    </tbody>
+</table>
