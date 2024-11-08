@@ -8,7 +8,7 @@ import { HttpBackend, HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class CategoriaService {
 
-  url: string = 'http://localhost:8080/categoria';
+  url: string = 'http://localhost:8080/categorias';
 
   private http: HttpClient;
 
@@ -16,7 +16,7 @@ export class CategoriaService {
     this.http = new HttpClient(handler);
   }
 
-  public getCategoria() {
+  public getCategorias() {
     return this.http.get(this.url + '/listar').pipe(map(response=>response));
   }
 
