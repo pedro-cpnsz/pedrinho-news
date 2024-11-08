@@ -16,7 +16,7 @@ export class NoticiaService {
     this.http = new HttpClient(handler);
   }
 
-  public getNoticia() {
+  public getNoticias() {
     return this.http.get(this.url + '/listar').pipe(map(response=>response));
   }
 
