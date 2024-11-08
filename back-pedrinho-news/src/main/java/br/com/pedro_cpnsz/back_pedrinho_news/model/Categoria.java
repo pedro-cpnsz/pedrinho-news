@@ -28,11 +28,11 @@ public class Categoria {
 
     @JoinColumn(name = "id_categoria", referencedColumnName = "id")
     @ManyToOne
-    private Categoria categoria;
+    private Categoria categoria_pai;
 
-    public Categoria(String nome, Categoria categoria) {
+    public Categoria(String nome, Categoria categoria_pai) {
         this.nome = nome;
-        this.categoria = categoria;
+        this.categoria_pai = categoria_pai;
     }
 
 }

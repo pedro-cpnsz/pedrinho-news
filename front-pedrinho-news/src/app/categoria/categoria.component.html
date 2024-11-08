@@ -4,4 +4,12 @@
         <th>Nome</th>
         <th>Categoria pai</th>
     </thead>
+
+    <tbody>
+        <tr *ngFor="let cat of cat$">
+            <th>{{cat.id}}</th>
+            <th>{{cat.nome}}</th>
+            <th>{{cat.categoria_pai?.nome}}</th>
+        </tr>
+    </tbody>
 </table>

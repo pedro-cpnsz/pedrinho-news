@@ -5,7 +5,7 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, RouterLink, RouterLinkActive, NgFor],
+  imports: [RouterOutlet, RouterModule, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

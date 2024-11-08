@@ -17,7 +17,10 @@ export class CategoriaService {
   }
 
   public getCategorias() {
-    return this.http.get(this.url + '/listar').pipe(map(response=>response));
+    const headers = new HttpHeaders();
+    headers.set("Content-Type", "Application/json");
+    headers.set('Access-Control-Allow-Origin', '*');
+    return this.http.get(this.url + '/listar', {headers}).pipe(map(response => response));
   }
 
   public getCategoriaById(id: number) {
