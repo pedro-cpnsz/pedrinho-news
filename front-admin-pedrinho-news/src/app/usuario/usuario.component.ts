@@ -30,4 +30,14 @@ export class UsuarioComponent implements OnInit {
     this.usu$ = await lastValueFrom(this.usuarioService.getAll());
   }
 
+  public update(id: number){
+    this.router.navigate(['usuarios/editar/', id]);
+    console.log(id);
+  }
+
+  public async delete(id: number){
+    let ret = await lastValueFrom(this.usuarioService.delete(id));
+    this.usu$ = await lastValueFrom(this.usuarioService.getAll());
+  }
+
 }

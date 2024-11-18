@@ -30,4 +30,14 @@ export class CategoriaComponent implements OnInit {
     this.cat$ = await lastValueFrom(this.categoriaService.getAll());
   }
 
+  public update(id: number){
+    this.router.navigate(['categorias/editar/', id]);
+    console.log(id);
+  }
+
+  public async delete(id: number){
+    let ret = await lastValueFrom(this.categoriaService.delete(id));
+    this.cat$ = await lastValueFrom(this.categoriaService.getAll());
+  }
+
 }

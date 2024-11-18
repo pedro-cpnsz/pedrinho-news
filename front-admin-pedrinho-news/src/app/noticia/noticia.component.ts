@@ -30,4 +30,14 @@ export class NoticiaComponent implements OnInit {
     this.not$ = await lastValueFrom(this.noticiaService.getAll());
   }
 
+  public update(id: number){
+    this.router.navigate(['noticias/editar/', id]);
+    console.log(id);
+  }
+
+  public async delete(id: number){
+    let ret = await lastValueFrom(this.noticiaService.delete(id));
+    this.not$ = await lastValueFrom(this.noticiaService.getAll());
+  }
+
 }

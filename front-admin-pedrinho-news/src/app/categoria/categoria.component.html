@@ -1,8 +1,13 @@
-<table>
+<a routerLink="novo" class="btn btn-primary left">Novo</a>
+
+<table class="table">
+
     <thead>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Categoria pai</th>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Categoria Pai</th>
+        </tr>
     </thead>
 
     <tbody>
@@ -10,6 +15,11 @@
             <th>{{cat.id}}</th>
             <th>{{cat.nome}}</th>
             <th>{{cat.categoria_pai?.nome}}</th>
+            <th>
+                <a (click)="update(cat.id)"  class="btn btn-primary">Editar</a>&nbsp;
+                <a (click)="delete(cat.id)" class="btn btn-danger">Excluir</a>                
+            </th>
         </tr>
     </tbody>
+
 </table>
