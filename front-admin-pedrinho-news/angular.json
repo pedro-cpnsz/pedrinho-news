@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "front-pedrinho-news": {
+    "front-admin-pedrinho-news": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/front-pedrinho-news",
+            "outputPath": "dist/front-admin-pedrinho-news",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "front-pedrinho-news:build:production"
+              "buildTarget": "front-admin-pedrinho-news:build:production"
             },
             "development": {
-              "buildTarget": "front-pedrinho-news:build:development"
+              "buildTarget": "front-admin-pedrinho-news:build:development"
             }
           },
           "defaultConfiguration": "development"
