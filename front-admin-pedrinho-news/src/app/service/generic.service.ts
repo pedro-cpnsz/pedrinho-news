@@ -34,7 +34,7 @@ export class GenericService<T extends Identificador> {
     if (object.id !== null) {
       return this.http.put<T>(this.url + `/editar/${object.id}`, object, { headers });
     }
-    return this.http.put<T>(this.url + '  /novo', object, { headers });
+    return this.http.put<T>(this.url + '/novo', object, { headers });
   }
 
   public delete(id: number) {

@@ -7,7 +7,7 @@ import { HttpBackend } from '@angular/common/http';
   providedIn: 'root'
 })
 
-export class CategoriaService extends GenericService<Usuario> {
+export class UsuarioService extends GenericService<Usuario> {
 
   constructor(handler: HttpBackend) {
     let url = "http://localhost:8080/usuarios";

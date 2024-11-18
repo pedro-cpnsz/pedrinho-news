@@ -1,1 +1,21 @@
-<p>usuario works!</p>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Senha</th>
+        <th>Tipo</th>
+        <th>Data cadastro</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let usu of usu$">
+            <th>{{usu.id}}</th>
+            <th>{{usu.nome}}</th>
+            <th>{{usu.email}}</th>
+            <th>{{usu.senha}}</th>
+            <th>{{usu.tipo}}</th>
+            <th>{{usu.data_cadastro}}</th>
+        </tr>
+    </tbody>
+</table>
