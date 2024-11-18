@@ -8,15 +8,15 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 
 export const routes: Routes = [
-    {path: 'categoria', component: CategoriaComponent},
-    {path: 'categoria/novo', component: CategoriaFormComponent},
-    {path: 'categoria/editar/:id', component: CategoriaFormComponent},
-    {path: 'usuario', component: UsuarioComponent},
-    {path: 'usuario/novo', component: UsuarioFormComponent},
-    {path: 'usuario/editar/:id', component: UsuarioFormComponent},
-    {path: 'noticia', component: NoticiaComponent},
-    {path: 'noticia/novo', component: NoticiaFormComponent},
-    {path: 'noticia/editar/:id', component: NoticiaFormComponent},
+    {path: 'categorias', component: CategoriaComponent},
+    {path: 'categorias/novo', component: CategoriaFormComponent},
+    {path: 'categorias/editar/:id', component: CategoriaFormComponent},
+    {path: 'usuarios', component: UsuarioComponent},
+    {path: 'usuarios/novo', component: UsuarioFormComponent},
+    {path: 'usuarios/editar/:id', component: UsuarioFormComponent},
+    {path: 'noticias', component: NoticiaComponent},
+    {path: 'noticias/novo', component: NoticiaFormComponent},
+    {path: 'noticias/editar/:id', component: NoticiaFormComponent},
     {path: '', component: HomeComponent}
     
 ];

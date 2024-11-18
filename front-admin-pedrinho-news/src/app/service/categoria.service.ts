@@ -10,7 +10,7 @@ import { Categoria } from '../model/categoria.model';
 export class CategoriaService extends GenericService<Categoria> {
 
   constructor(handler: HttpBackend) {
-    let url = "http://localhost:8080/categoria";
+    let url = "http://localhost:8080/categorias";
     super(handler, url);
   }
 

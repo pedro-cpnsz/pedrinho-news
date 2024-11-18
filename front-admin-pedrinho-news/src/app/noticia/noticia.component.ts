@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { NoticiaService } from '../service/noticia.service';
+import { Router, RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -18,7 +18,7 @@ export class NoticiaComponent implements OnInit {
 
   not$: any;
 
-  constructor(private noticiaService: NoticiaService) {
+  constructor(private noticiaService: NoticiaService, private router: Router) {
 
   }
   
@@ -29,4 +29,5 @@ export class NoticiaComponent implements OnInit {
   public async getNoticia() {
     this.not$ = await lastValueFrom(this.noticiaService.getAll());
   }
+
 }
