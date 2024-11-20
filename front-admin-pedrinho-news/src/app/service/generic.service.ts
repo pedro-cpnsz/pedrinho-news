@@ -24,17 +24,20 @@ export class GenericService<T extends Identificador> {
   }
 
   public getById(id: number) {
-    return this.http.get(this.url + '/listar' + id).pipe(map(response => response));
+    return this.http.get(this.url + '/listar/' + id).pipe(map(response => response));
   }
 
   public save(object: T): Observable<T> {
     const headers = new HttpHeaders();
     headers.set("Content-Type", "Application/json");
-
+    headers.set('Access-Control-Allow-Origin', '*');
     if (object.id !== null) {
+      console.log('if generic');
       return this.http.put<T>(this.url + `/editar/${object.id}`, object, { headers });
     }
-    return this.http.put<T>(this.url + '/novo', object, { headers });
+    console.log('else generic');
+    return this.http.post<T>(this.url + '/novo', object, { headers });
+
   }
 
   public delete(id: number) {

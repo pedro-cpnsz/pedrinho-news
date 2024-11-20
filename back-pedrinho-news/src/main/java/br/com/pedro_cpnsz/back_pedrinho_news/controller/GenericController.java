@@ -34,7 +34,7 @@ public class GenericController<T, ID> {
 
     @RequestMapping(value = "novo", method = RequestMethod.POST)
     public ResponseEntity<T> create(@RequestBody T object) {
-        return new ResponseEntity<T>((T) object, HttpStatus.OK);
+        return new ResponseEntity<T>((T) repository.save(object), HttpStatus.OK);
     }
 
     @RequestMapping(value = "editar/{id}", method = RequestMethod.PUT)
