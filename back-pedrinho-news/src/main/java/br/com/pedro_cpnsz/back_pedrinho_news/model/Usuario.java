@@ -2,6 +2,8 @@ package br.com.pedro_cpnsz.back_pedrinho_news.model;
 
 import java.sql.Timestamp;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -42,14 +44,14 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private Tipo tipo;
 
-    @Column(name = "data_cadastro")
+    @CreationTimestamp
+    @Column(name = "data_cadastro", updatable = false)
     private Timestamp data_cadastro;
 
-    public Usuario(String nome, String email, String senha, Tipo tipo, Timestamp data_cadastro) {
+    public Usuario(String nome, String email, String senha, Tipo tipo) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.tipo = tipo;
-        this.data_cadastro = data_cadastro;
     }
 }

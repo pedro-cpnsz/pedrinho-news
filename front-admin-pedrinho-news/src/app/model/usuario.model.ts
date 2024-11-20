@@ -4,5 +4,4 @@ export class Usuario {
     email!: string|null;
     senha!: string|null;
     tipo!: string|null;
-    data_cadastro!: Date|null;
 }

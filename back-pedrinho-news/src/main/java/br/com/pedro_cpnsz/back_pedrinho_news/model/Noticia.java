@@ -1,6 +1,7 @@
 package br.com.pedro_cpnsz.back_pedrinho_news.model;
 
 import java.sql.Timestamp;
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,14 +42,14 @@ public class Noticia {
     @ManyToOne
     private Categoria categoria;
 
-    @Column(name = "data_publicacao")
+    @CreationTimestamp
+    @Column(name = "data_publicacao", updatable = false)
     private Timestamp data_publicacao;
 
-    public Noticia(String titulo, String conteudo, Usuario usuario, Categoria categoria, Timestamp data_publicacao) {
+    public Noticia(String titulo, String conteudo, Usuario usuario, Categoria categoria) {
         this.titulo = titulo;
         this.conteudo = conteudo;
         this.usuario = usuario;
         this.categoria = categoria;
-        this.data_publicacao = data_publicacao;
     }
 }

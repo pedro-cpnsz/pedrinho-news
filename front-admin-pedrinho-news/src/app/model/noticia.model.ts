@@ -6,6 +6,5 @@ export class Noticia {
     titulo!: string|null;
     conteudo!: string|null;
     usuario!: Usuario|null;
-    categoria!: Categoria|null;
-    data_publicacao!: Date|null;
+    categoria?: Categoria|null;
 }

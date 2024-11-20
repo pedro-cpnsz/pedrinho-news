@@ -1,11 +1,15 @@
-<table>
+<a routerLink="novo" class="btn btn-primary left">Novo</a>
+
+<table class="table">
     <thead>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>E-mail</th>
-        <th>Senha</th>
-        <th>Tipo</th>
-        <th>Data cadastro</th>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Senha</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data cadastro</th>
+        </tr>    
     </thead>
 
     <tbody>
@@ -16,6 +20,10 @@
             <th>{{usu.senha}}</th>
             <th>{{usu.tipo}}</th>
             <th>{{usu.data_cadastro}}</th>
+            <th>
+                <a (click)="update(usu.id)"  class="btn btn-primary">Editar</a>&nbsp;
+                <a (click)="delete(usu.id)" class="btn btn-danger">Excluir</a>                
+            </th>
         </tr>
     </tbody>
 </table>

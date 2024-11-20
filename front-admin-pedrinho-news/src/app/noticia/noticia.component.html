@@ -1,11 +1,15 @@
-<table>
+<a routerLink="novo" class="btn btn-primary left">Novo</a>
+
+<table class="table">
     <thead>
-        <th>ID</th>
-        <th>Título</th>
-        <th>Conteúdo</th>
-        <th>Usuário</th>
-        <th>Categoria</th>
-        <th>Data de publicação</th>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Conteúdo</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Data de publicação</th>
+        </tr>
     </thead>
 
     <tbody>
@@ -16,6 +20,10 @@
             <th>{{not.usuario.nome}}</th>
             <th>{{not.categoria.nome}}</th>
             <th>{{not.data_publicacao}}</th>
+            <th>
+                <a (click)="update(not.id)"  class="btn btn-primary">Editar</a>&nbsp;
+                <a (click)="delete(not.id)" class="btn btn-danger">Excluir</a>                
+            </th>
         </tr>
     </tbody>
 </table>

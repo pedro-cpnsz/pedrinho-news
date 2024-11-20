@@ -1,8 +1,5 @@
 package br.com.pedro_cpnsz.back_pedrinho_news.service;
 
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -38,18 +35,17 @@ public class DataBaseInsert implements CommandLineRunner {
         Categoria c3 = new Categoria("Futebol", c2);
         categoriaRepository.save(c3);
 
-        LocalDateTime now = LocalDateTime.now();
-        Usuario u1 = new Usuario("Pedro", "pedro@email.com", "123123", Tipo.admin, Timestamp.valueOf(now));
+        Usuario u1 = new Usuario("Pedro", "pedro@email.com", "123123", Tipo.admin);
         usuarioRepository.save(u1);
-        Usuario u2 = new Usuario("Juquinha", "juquinha@email.com", "123123", Tipo.autor, Timestamp.valueOf(now));
+        Usuario u2 = new Usuario("Juquinha", "juquinha@email.com", "123123", Tipo.autor);
         usuarioRepository.save(u2);
 
-        Noticia n1 = new Noticia("Primeira notícia teste", "Uma grande descrição para testar.", u2, c2, Timestamp.valueOf(now));
+        Noticia n1 = new Noticia("Primeira notícia teste", "Uma grande descrição para testar.", u2, c2);
         noticiaRepository.save(n1);
-        Noticia n2 = new Noticia("Segunda notícia teste", "Uma grande descrição para testar.", u2, c1, Timestamp.valueOf(now));
+        Noticia n2 = new Noticia("Segunda notícia teste", "Uma grande descrição para testar.", u2, c1);
         noticiaRepository.save(n2);
 
-        Comentario com1 = new Comentario(n1, "Pedro", "pedro@email.com", "Comentário para testar", Timestamp.valueOf(now));
+        Comentario com1 = new Comentario(n1, "Pedro", "pedro@email.com", "Comentário para testar");
         comentarioRepository.save(com1);
 
     }

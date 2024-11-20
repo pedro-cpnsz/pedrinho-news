@@ -1,6 +1,9 @@
 package br.com.pedro_cpnsz.back_pedrinho_news.model;
 
 import java.sql.Timestamp;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,15 +40,15 @@ public class Comentario {
     @Column(name = "comentario")
     private String comentario;
 
-    @Column(name = "data_comentario")
+    @CreationTimestamp
+    @Column(name = "data_comentario", updatable = false)
     private Timestamp data_comentario;
 
-    public Comentario(Noticia noticia, String nome_usuario, String email_usuario, String comentario, Timestamp data_comentario) {
+    public Comentario(Noticia noticia, String nome_usuario, String email_usuario, String comentario) {
         this.noticia = noticia;
         this.nome_usuario = nome_usuario;
         this.email_usuario = email_usuario;
         this.comentario = comentario;
-        this.data_comentario = data_comentario;
     }
 
 }
