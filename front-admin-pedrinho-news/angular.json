@@ -28,11 +28,17 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css",
+              "node_modules/@docsearch/css/dist/_variables.css",
+              "node_modules/@docsearch/css/dist/button.css",
+              "node_modules/@docsearch/css/dist/modal.css",
+              "node_modules/@docsearch/css/dist/style.css",
               "src/styles.css"
-              
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/app/color-modes.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,
