@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { UsuarioService } from '../service/usuario.service';
 import { Router, RouterModule } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { DatePipe, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-usuario',
   standalone: true,
   imports: [
     NgFor,
-    RouterModule
+    RouterModule,
+    DatePipe
   ],
   templateUrl: './usuario.component.html',
   styleUrl: './usuario.component.css'
@@ -27,7 +28,10 @@ export class UsuarioComponent implements OnInit {
   }
 
   public async getUsuario() {
-    this.usu$ = await lastValueFrom(this.usuarioService.getAll());
+    const usuarios = await lastValueFrom(this.usuarioService.getAll()) as any[];
+    this.usu$ = usuarios;
+
+    this.usuarioService.setTotalUsuarios(usuarios.length);
   }
 
   public update(id: number){

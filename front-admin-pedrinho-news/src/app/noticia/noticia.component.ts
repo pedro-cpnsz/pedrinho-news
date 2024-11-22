@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { NoticiaService } from '../service/noticia.service';
 import { Router, RouterModule } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { DatePipe, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-noticia',
   standalone: true,
   imports: [
     NgFor,
-    RouterModule
+    RouterModule,
+    DatePipe
   ],
   templateUrl: './noticia.component.html',
   styleUrl: './noticia.component.css'

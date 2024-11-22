@@ -19,7 +19,7 @@
             <th>{{usu.email}}</th>
             <th>{{usu.senha}}</th>
             <th>{{usu.tipo}}</th>
-            <th>{{usu.data_cadastro}}</th>
+            <th>{{usu.data_cadastro | date: 'dd/MM/yyyy HH:mm'}}</th>
             <th>
                 <a (click)="update(usu.id)"  class="btn btn-primary">Editar</a>&nbsp;
                 <a (click)="delete(usu.id)" class="btn btn-danger">Excluir</a>                

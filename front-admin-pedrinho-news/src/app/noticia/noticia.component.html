@@ -19,7 +19,7 @@
             <th>{{not.conteudo}}</th>
             <th>{{not.usuario.nome}}</th>
             <th>{{not.categoria.nome}}</th>
-            <th>{{not.data_publicacao}}</th>
+            <th>{{not.data_publicacao | date: 'dd/MM/yyyy HH:mm'}}</th>
             <th>
                 <a (click)="update(not.id)"  class="btn btn-primary">Editar</a>&nbsp;
                 <a (click)="delete(not.id)" class="btn btn-danger">Excluir</a>                
