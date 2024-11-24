@@ -4,11 +4,31 @@
   <h1 class="h1">Painel administrativo</h1>
 </div>
 
-<h2>Resumo</h2>
-<div class="container text-center">
-  <div class="row">
-    <div class="col"><p>Usuários cadastrados: {{ totalUsuarios }}</p></div>
-    <div class="col">2 of 3</div>
-    <div class="col">3 of 3</div>
+<div class="container px-4 py-5" id="custom-cards">
+  <h2 class="pb-2 border-bottom">Resumo</h2>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="card card-cover-1 h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+          <h3 class="pt-1 mt-0 mb-4 display-6 lh-1 fw-bold">Notícias cadastradas: {{ totalNoticias }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover-2 h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+          <h3 class="pt-1 mt-0 mb-4 display-6 lh-1 fw-bold">Categorias cadastradas: {{ totalCategorias }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover-3 h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+          <h3 class="pt-1 mt-0 mb-4 display-6 lh-1 fw-bold">Usuarios cadastrados: {{ totalUsuarios }}</h3>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

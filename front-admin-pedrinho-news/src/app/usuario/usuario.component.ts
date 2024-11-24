@@ -28,10 +28,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   public async getUsuario() {
-    const usuarios = await lastValueFrom(this.usuarioService.getAll()) as any[];
-    this.usu$ = usuarios;
-
-    this.usuarioService.setTotalUsuarios(usuarios.length);
+    this.usu$ = await lastValueFrom(this.usuarioService.getAll());
   }
 
   public update(id: number){
