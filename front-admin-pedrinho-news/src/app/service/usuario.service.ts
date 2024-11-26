@@ -13,11 +13,4 @@ export class UsuarioService extends GenericService<Usuario> {
     super(handler, url);
   }
 
-  private totalUsuariosSubject = new BehaviorSubject<number>(0);
-
-  totalUsuarios$ = this.totalUsuariosSubject.asObservable();
-
-  setTotalUsuarios(total: number): void {
-    this.totalUsuariosSubject.next(total);
-  }
 }

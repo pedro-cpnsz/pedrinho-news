@@ -3,26 +3,27 @@
 <form class="form" [formGroup]="form">
 
     <div class="mb-3">        
-        <label for="id"></label>
-        <input id="id" type="text" class="form-control" placeholder="ID" [formControl]="form.controls.id">
+        <label for="id">ID</label>
+        <input id="id" type="text" class="form-control" placeholder="ID" [formControl]="form.controls.id" readonly>
     </div>
 
     <div class="mb-3">
-        <label for="nome"></label>
+        <label for="nome">Nome</label>
         <input id="nome" type="text" class="form-control" placeholder="Nome" [formControl]="form.controls.nome">
     </div>
 
     <div class="mb-3">
-        <label for="email"></label>
+        <label for="email">E-mail</label>
         <input id="email" type="email" class="form-control" placeholder="E-mail" [formControl]="form.controls.email">
     </div>
 
     <div class="mb-3">
-        <label for="senha"></label>
+        <label for="senha">Senha</label>
         <input id="senha" type="password" class="form-control" placeholder="Senha" [formControl]="form.controls.senha">
     </div>
 
-    <div class="mb-3">        
+    <div class="mb-3">
+        <label for="tipo">Tipo</label>
         <select [formControl]="form.controls.tipo" class="form-select">
             <option value="admin">Admin</option>
             <option value="autor">Autor</option>
