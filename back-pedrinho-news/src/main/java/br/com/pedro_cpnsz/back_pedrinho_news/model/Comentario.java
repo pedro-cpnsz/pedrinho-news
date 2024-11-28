@@ -30,7 +30,7 @@ public class Comentario {
     @JoinColumn(name = "id_noticia", referencedColumnName = "id")
     @ManyToOne
     private Noticia noticia;
-    
+
     @Column(name = "nome_usuario")
     private String nome_usuario;
 

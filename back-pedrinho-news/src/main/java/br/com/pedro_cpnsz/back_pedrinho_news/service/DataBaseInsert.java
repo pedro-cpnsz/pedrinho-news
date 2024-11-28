@@ -70,35 +70,50 @@ public class DataBaseInsert implements CommandLineRunner {
         Usuario u5 = new Usuario("Maicon", "maicon@email.com", "321321", Tipo.autor);
         usuarioRepository.save(u5);
 
-        Noticia n1 = new Noticia("Avanços na exploração espacial", "A NASA anuncia uma nova missão para explorar Marte em 2026.", u1, c1);
+        Noticia n1 = new Noticia("Avanços na exploração espacial",
+                "A NASA anuncia uma nova missão para explorar Marte em 2026.", u1, c1);
         noticiaRepository.save(n1);
-        Noticia n2 = new Noticia("Novo marco na educação brasileira", "O governo aprova uma nova lei que revoluciona o ensino médio.", u2, c2);
+        Noticia n2 = new Noticia("Novo marco na educação brasileira",
+                "O governo aprova uma nova lei que revoluciona o ensino médio.", u2, c2);
         noticiaRepository.save(n2);
-        Noticia n3 = new Noticia("Inflação desacelera no Brasil", "Indicadores mostram que a inflação caiu pelo segundo mês consecutivo.", u3, c3);
+        Noticia n3 = new Noticia("Inflação desacelera no Brasil",
+                "Indicadores mostram que a inflação caiu pelo segundo mês consecutivo.", u3, c3);
         noticiaRepository.save(n3);
-        Noticia n4 = new Noticia("Lançamento do novo smartphone", "A fabricante X apresentou um modelo inovador com tela dobrável.", u4, c4);
+        Noticia n4 = new Noticia("Lançamento do novo smartphone",
+                "A fabricante X apresentou um modelo inovador com tela dobrável.", u4, c4);
         noticiaRepository.save(n4);
-        Noticia n5 = new Noticia("Copa do Mundo: Brasil vence mais uma", "A seleção brasileira derrota a Argentina em um jogo emocionante.", u5, c5);
+        Noticia n5 = new Noticia("Copa do Mundo: Brasil vence mais uma",
+                "A seleção brasileira derrota a Argentina em um jogo emocionante.", u5, c5);
         noticiaRepository.save(n5);
-        Noticia n6 = new Noticia("Empresas investem em startups", "Grandes corporações estão apostando em novas ideias de tecnologia.", u1, c6);
+        Noticia n6 = new Noticia("Empresas investem em startups",
+                "Grandes corporações estão apostando em novas ideias de tecnologia.", u1, c6);
         noticiaRepository.save(n6);
-        Noticia n7 = new Noticia("Novo debate na Câmara dos Deputados", "Parlamentares discutem projetos sobre mudanças climáticas.", u2, c7);
+        Noticia n7 = new Noticia("Novo debate na Câmara dos Deputados",
+                "Parlamentares discutem projetos sobre mudanças climáticas.", u2, c7);
         noticiaRepository.save(n7);
-        Noticia n8 = new Noticia("Álbum surpresa de banda famosa", "A banda de rock Y lança um álbum sem anúncios prévios.", u3, c8);
+        Noticia n8 = new Noticia("Álbum surpresa de banda famosa",
+                "A banda de rock Y lança um álbum sem anúncios prévios.", u3, c8);
         noticiaRepository.save(n8);
-        Noticia n9 = new Noticia("Avanço na cura do câncer", "Pesquisadores anunciam resultados promissores em testes clínicos.", u4, c9);
+        Noticia n9 = new Noticia("Avanço na cura do câncer",
+                "Pesquisadores anunciam resultados promissores em testes clínicos.", u4, c9);
         noticiaRepository.save(n9);
-        Noticia n10 = new Noticia("Nova vacina contra gripe", "Autoridades aprovam um imunizante mais eficaz contra variações do vírus.", u5, c10);
+        Noticia n10 = new Noticia("Nova vacina contra gripe",
+                "Autoridades aprovam um imunizante mais eficaz contra variações do vírus.", u5, c10);
         noticiaRepository.save(n10);
-        Noticia n11 = new Noticia("Semana da moda agita Paris", "Grandes marcas apresentam suas coleções para o próximo verão.", u1, c11);
+        Noticia n11 = new Noticia("Semana da moda agita Paris",
+                "Grandes marcas apresentam suas coleções para o próximo verão.", u1, c11);
         noticiaRepository.save(n11);
-        Noticia n12 = new Noticia("Exposição histórica em museu", "Museu Z exibe obras raras de grandes artistas renascentistas.", u2, c12);
+        Noticia n12 = new Noticia("Exposição histórica em museu",
+                "Museu Z exibe obras raras de grandes artistas renascentistas.", u2, c12);
         noticiaRepository.save(n12);
-        Noticia n13 = new Noticia("Brasileirão: rodada decisiva", "Times lutam por vaga na Libertadores em uma rodada emocionante.", u3, c13);
+        Noticia n13 = new Noticia("Brasileirão: rodada decisiva",
+                "Times lutam por vaga na Libertadores em uma rodada emocionante.", u3, c13);
         noticiaRepository.save(n13);
-        Noticia n14 = new Noticia("Bitcoin atinge novo recorde", "A criptomoeda ultrapassa a marca de 70 mil dólares pela primeira vez.", u4, c14);
+        Noticia n14 = new Noticia("Bitcoin atinge novo recorde",
+                "A criptomoeda ultrapassa a marca de 70 mil dólares pela primeira vez.", u4, c14);
         noticiaRepository.save(n14);
-        Noticia n15 = new Noticia("Show de rock atrai multidões", "O festival X recebe grandes nomes do rock internacional.", u5, c15);
+        Noticia n15 = new Noticia("Show de rock atrai multidões",
+                "O festival X recebe grandes nomes do rock internacional.", u5, c15);
         noticiaRepository.save(n15);
         Noticia n16 = new Noticia("Notícia teste", "Uma grande descrição para testar.", u2, c1);
         noticiaRepository.save(n16);

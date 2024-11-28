@@ -20,7 +20,7 @@ public class CategoriaController extends GenericController<Categoria, Integer> {
     CategoriaRepository categoriaRepository;
 
     @RequestMapping(value = "listarPrincipais", method = RequestMethod.GET)
-    public ResponseEntity<List<Categoria>> listarPrincipais(){
+    public ResponseEntity<List<Categoria>> listarPrincipais() {
         return ResponseEntity.ok((List<Categoria>) categoriaRepository.findByPrincipal(true));
     }
 

@@ -2,10 +2,6 @@ import { HttpBackend, HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
-interface Identificador {
-  id: number | null;
-}
-
 @Injectable({
   providedIn: 'root'
 })
