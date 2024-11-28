@@ -134,18 +134,9 @@
 
   <div class="nav-scroller py-1 mb-3 border-bottom">
     <nav class="nav nav-underline justify-content-between">
-      <a class="nav-item nav-link link-body-emphasis" href="#">Mundo</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Brasil</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Economia</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Tecnologia</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Esportes</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Negócios</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Política</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Música</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Ciencia</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Saúde</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Moda</a>
-      <a class="nav-item nav-link link-body-emphasis" href="#">Cultura</a>
+      <li class="nav-item" *ngFor="let cat of categoria$">
+        <a class="nav-item nav-link link-body-emphasis" [routerLink]="['./noticias/categoria', cat.id]">{{ cat.nome }}</a>
+      </li>
     </nav>
   </div>
 </div>

@@ -102,6 +102,7 @@ export class NoticiaFormComponent implements OnInit {
         "categoria": {
           "id": id_categoria,
           "nome": null,
+          "principal": null,
           "categoria_pai": null
         }
       };   

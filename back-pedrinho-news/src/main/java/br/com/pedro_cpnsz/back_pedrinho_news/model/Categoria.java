@@ -26,12 +26,16 @@ public class Categoria {
     @Column(name = "nome")
     private String nome;
 
+    @Column(name = "principal")
+    private boolean principal;
+
     @JoinColumn(name = "id_categoria", referencedColumnName = "id")
     @ManyToOne
     private Categoria categoria_pai;
 
-    public Categoria(String nome, Categoria categoria_pai) {
+    public Categoria(String nome, boolean principal, Categoria categoria_pai) {
         this.nome = nome;
+        this.principal = principal;
         this.categoria_pai = categoria_pai;
     }
 

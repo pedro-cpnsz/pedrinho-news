@@ -12,6 +12,11 @@
         <input id="nome" type="text" class="form-control" placeholder="Nome" [formControl]="form.controls.nome">
     </div>
 
+    <div class="mb-3">
+        <label class="form-check-label" for="principal">Categoria principal?</label>
+        <input class="form-control form-check-input" type="checkbox" value="" id="flexCheckDefault" [formControl]="form.controls.principal">
+    </div>
+
     <div class="mb-3">       
         <label for="categoria">Categoria pai</label> 
         <select [formControl]="form.controls.categoria_pai" class="form-select">

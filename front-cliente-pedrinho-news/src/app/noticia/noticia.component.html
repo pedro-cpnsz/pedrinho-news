@@ -1,0 +1,13 @@
+<div class="col-md-8">
+  <article class="blog-post">
+    <h2 class="display-5 link-body-emphasis mb-1">{{ not.titulo }}</h2>
+    <p class="blog-post-meta">
+      {{ not.data_publicacao | date : "dd/MM/yyyy HH:mm" }} por
+      {{ not.usuario.nome }} &bullet; {{ not.categoria.nome }}
+    </p>
+
+    <hr />
+
+    <p>{{ not.conteudo }}</p>
+  </article>
+</div>

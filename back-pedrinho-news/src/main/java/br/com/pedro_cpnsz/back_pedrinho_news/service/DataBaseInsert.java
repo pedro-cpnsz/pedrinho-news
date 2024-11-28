@@ -28,35 +28,35 @@ public class DataBaseInsert implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Categoria c1 = new Categoria("Mundo", null);
+        Categoria c1 = new Categoria("Mundo", true, null);
         categoriaRepository.save(c1);
-        Categoria c2 = new Categoria("Brasil", null);
+        Categoria c2 = new Categoria("Brasil", true, null);
         categoriaRepository.save(c2);
-        Categoria c3 = new Categoria("Economia", null);
+        Categoria c3 = new Categoria("Economia", true, null);
         categoriaRepository.save(c3);
-        Categoria c4 = new Categoria("Tecnologia", null);
+        Categoria c4 = new Categoria("Tecnologia", true, null);
         categoriaRepository.save(c4);
-        Categoria c5 = new Categoria("Esportes", null);
+        Categoria c5 = new Categoria("Esportes", true, null);
         categoriaRepository.save(c5);
-        Categoria c6 = new Categoria("Negócios", null);
+        Categoria c6 = new Categoria("Negócios", true, null);
         categoriaRepository.save(c6);
-        Categoria c7 = new Categoria("Política", null);
+        Categoria c7 = new Categoria("Política", true, null);
         categoriaRepository.save(c7);
-        Categoria c8 = new Categoria("Música", null);
+        Categoria c8 = new Categoria("Música", true, null);
         categoriaRepository.save(c8);
-        Categoria c9 = new Categoria("Ciência", null);
+        Categoria c9 = new Categoria("Ciência", true, null);
         categoriaRepository.save(c9);
-        Categoria c10 = new Categoria("Saúde", null);
+        Categoria c10 = new Categoria("Saúde", true, null);
         categoriaRepository.save(c10);
-        Categoria c11 = new Categoria("Moda", null);
+        Categoria c11 = new Categoria("Moda", true, null);
         categoriaRepository.save(c11);
-        Categoria c12 = new Categoria("Cultura", null);
+        Categoria c12 = new Categoria("Cultura", true, null);
         categoriaRepository.save(c12);
-        Categoria c13 = new Categoria("Futebol", c5);
+        Categoria c13 = new Categoria("Futebol", false, c5);
         categoriaRepository.save(c13);
-        Categoria c14 = new Categoria("Criptomoedas", c3);
+        Categoria c14 = new Categoria("Criptomoedas", false, c3);
         categoriaRepository.save(c14);
-        Categoria c15 = new Categoria("Rock", c8);
+        Categoria c15 = new Categoria("Rock", false, c8);
         categoriaRepository.save(c15);
 
         Usuario u1 = new Usuario("Pedro", "pedro@email.com", "123123", Tipo.admin);

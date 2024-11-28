@@ -99,6 +99,7 @@
 }
 
 .card-cover-1 {
+  min-height: 250px;
   background-image: url('newspaper-background-concept.jpg');
   background-repeat: no-repeat;
   background-position: center center;

@@ -28,6 +28,7 @@ export class CategoriaFormComponent implements OnInit {
   form = new FormGroup({
     id: new FormControl<number|null>(null),
     nome: new FormControl<string>(''),
+    principal: new FormControl<boolean>(false),
     categoria_pai: new FormControl<number|null>(null)
   });
 
@@ -52,6 +53,7 @@ export class CategoriaFormComponent implements OnInit {
     console.log(this.categoria);
     this.form.controls.id.setValue(this.categoria.id);
     this.form.controls.nome.setValue(this.categoria.nome);
+    this.form.controls.principal.setValue(this.categoria.principal);
     this.form.controls.categoria_pai.setValue(this.categoria.categoria_pai?.id);
   }
 
@@ -61,6 +63,7 @@ export class CategoriaFormComponent implements OnInit {
       id_ = this.id;
     }
     let nome = this.form.controls.nome.value;
+    let principal = this.form.controls.principal.value;
     let id_categoria_pai = this.form.controls.categoria_pai.value;
     console.log(id_categoria_pai);
     let categoria: Categoria;
@@ -70,9 +73,11 @@ export class CategoriaFormComponent implements OnInit {
       categoria = {
         "id": id_,
         "nome": nome,
+        "principal": principal,
         "categoria_pai": {
           "id": id_categoria_pai,        
           "nome": null,
+          "principal": null,
           "categoria_pai": null
         }
       };   
@@ -81,6 +86,7 @@ export class CategoriaFormComponent implements OnInit {
       categoria = {
         "id": id_,
         "nome": nome,
+        "principal": principal
       };   
     }
    
